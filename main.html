@@ -30,11 +30,11 @@
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
             <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                <div class="card border p-4 text-center rounded-sm">
+                <div id="addMoneyCard" class="card border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/wallet 1.png" alt="">
                     <button>Add Money</button>
                 </div>
-                <div class="card border p-4 text-center rounded-sm">
+                <div id="cashOutCard" class="card border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/send 1.png" alt="">
                     <button>Cashout</button>
                 </div>
@@ -55,8 +55,8 @@
                     <button>Transactions</button>
                 </div>
         </section>
-            <div>
-  <div class="hero-content flex-col lg:flex-row-reverse">
+       <section id="addMoney">
+        <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form class="card-body">
         <h1>Add Money</h1>
@@ -77,19 +77,35 @@
         </fieldset>
       </form>
     </div>
-  </div>
-
-        
+  </div> 
+       </section>    
     </header>
 
-    <div>
- 
-</div>
+    <section id="cashOut">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <form class="card-body">
+        <h1>Cash Out</h1>
+        <fieldset class="fieldset">
+          <label class="fieldset-label">Agent Number</label>
+          <input id="mobileNumber" type="number" class="input" placeholder="Enter 11 digit number" required/>
+          <label class="fieldset-label">Amount</label>
+          <input id="amount" type="text" class="input" placeholder="Enter amount to withdraw" required/>
+          <label class="fieldset-label">Pin</label>
+          <input id="pinNumber" value="6897" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
+          <button id="addMoney" class="btn btn-neutral mt-4">Withdraw Money</button>
+        </fieldset>
+      </form>
+    </div>
+  </div> 
+    </section>
+   
     </section>
 
 
 
 
     <script src="script/addmoney.js"></script>
+    <script src="script/toggle.js"></script>
 </body>
 </html>
