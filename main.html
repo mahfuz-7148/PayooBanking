@@ -68,12 +68,12 @@
 </select>
         <fieldset class="fieldset">
           <label class="fieldset-label">Bank Account Number</label>
-          <input id="mobileNumber" type="number" class="input" placeholder="Enter your bank account number" required/>
+          <input id="accountNumber" type="number" class="input" placeholder="Enter your bank account number" required/>
           <label class="fieldset-label">Amount to Add</label>
           <input id="amount" type="text" class="input" placeholder="Add amount to withdraw" required/>
           <label class="fieldset-label">Pin</label>
           <input id="pinNumber" value="6897" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
-          <button id="addMoney" class="btn btn-neutral mt-4">Add Money</button>
+          <button id="addMoneyBtn" class="btn btn-neutral mt-4">Add Money</button>
         </fieldset>
       </form>
     </div>
@@ -90,10 +90,10 @@
           <label class="fieldset-label">Agent Number</label>
           <input id="mobileNumber" type="number" class="input" placeholder="Enter 11 digit number" required/>
           <label class="fieldset-label">Amount</label>
-          <input id="amount" type="text" class="input" placeholder="Enter amount to withdraw" required/>
+          <input id="cashAmount" type="text" class="input" placeholder="Enter amount to withdraw" required/>
           <label class="fieldset-label">Pin</label>
-          <input id="pinNumber" value="6897" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
-          <button id="addMoney" class="btn btn-neutral mt-4">Withdraw Money</button>
+          <input id="cashOutpinNumber" value="6897" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
+          <button id="cashoutBtn" class="btn btn-neutral mt-4">Withdraw Money</button>
         </fieldset>
       </form>
     </div>
@@ -107,5 +107,6 @@
 
     <script src="script/addmoney.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 </html>
