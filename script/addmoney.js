@@ -12,6 +12,16 @@ document
       if (pinNumber === "6897") {
         const sum = convertedMainBalance + convertedAmount;
         document.getElementById("mainBalance").innerText = sum;
+
+        const transactionHistoryContent = document.getElementById(
+          "transactionHistoryContent"
+        );
+        const selectBank = document.getElementById("selectBank").value
+        const div = document.createElement('div')
+        div.innerHTML = `
+          <p class="text-gray-800 font-medium mt-5 mx-5"> Added your balance ${amount} and Bank account number ${accountNumber} from ${selectBank} </p>
+          `;
+        transactionHistoryContent.appendChild(div)
       } else {
         window.alert("enter the valid pin number");
       }

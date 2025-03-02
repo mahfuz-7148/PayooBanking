@@ -20,7 +20,12 @@
                     <h1 class="text-2xl font-bold">$ <span id="mainBalance">4500</span></h1>
                     <p>Available Balance</p>
                 </div>
-                <button class="border border-gray-500 p-1 px-3 bg-white rounded-lg">Logout</button>
+                <button id="logoutBtn" class="border cursor-pointer border-gray-500 p-1 px-3 bg-white rounded-lg">Logout</button>
+                <script>
+                  document.getElementById('logoutBtn').addEventListener('click', function() {
+                    window.location.href = './index.html'
+                  })
+                </script>
         </nav>
 
         <section class="mt-10 m-3">
@@ -50,7 +55,7 @@
                     <img class="w-8 mx-auto" src="assets/purse 1.png" alt="">
                     <button>Pay Bill</button>
                 </div>
-                <div class="card border p-4 text-center rounded-sm">
+                <div id="transactionHistoryCard" class="card border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/Group.png" alt="">
                     <button>Transactions</button>
                 </div>
@@ -60,7 +65,7 @@
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form class="card-body">
         <h1>Add Money</h1>
-        <select class="select">
+        <select id="selectBank" class="select">
   <option disabled selected>Select A Bank</option>
   <option value="Bkash">Bkash</option>
   <option value="Nagad">Nagad</option>
@@ -78,10 +83,9 @@
       </form>
     </div>
   </div> 
-       </section>    
-    </header>
-
-    <section id="cashOut">
+       </section> 
+       
+       <section id="cashOut">
         <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form class="card-body">
@@ -100,6 +104,15 @@
   </div> 
     </section>
    
+    <section class="mt-10 m-3" id="transactionHistory">
+       <h1 class="text-2xl text-center font-bold">Transaction History</h1>
+
+       <div id="transactionHistoryContent">
+
+       </div>
+    </section>
+  
+    </header>
     </section>
 
 
@@ -108,5 +121,6 @@
     <script src="script/addmoney.js"></script>
     <script src="script/toggle.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/transactionHistory.js"></script>
 </body>
 </html>

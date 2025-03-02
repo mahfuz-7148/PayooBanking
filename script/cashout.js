@@ -13,6 +13,15 @@ document
       if (cashOutpinNumber === "6897") {
         const sum = convertedMainBalance - convertedAmount;
         document.getElementById("mainBalance").innerText = sum;
+
+        const transactionHistoryContent = document.getElementById(
+          "transactionHistoryContent"
+        );
+        const p = document.createElement("p");
+        p.innerHTML = `
+         <p class="text-gray-800 font-medium mt-5 mx-5"> Cashout your balance ${cashAmount} and Bank account number ${cashAccountNumber}</p>
+        `;
+        transactionHistoryContent.appendChild(p);
       } else {
         window.alert("enter the valid pin number");
       }
